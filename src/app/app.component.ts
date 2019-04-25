@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; //imports
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html', //html template
+  styleUrls: ['./app.component.scss'] //styling
 })
-export class AppComponent {
+
+export class AppComponent { //logic
   title = 'ng5';
 }
