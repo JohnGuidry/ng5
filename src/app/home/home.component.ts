@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  itemCount: number = 4;
+  itemCount: number;
   btnText: string = 'Add an item';
+  goalText: string = 'My first life goal';
+  goals = [];
   
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { //lifecycle hook, that is initiated when the component is loaded
+    this.itemCount = this.goals.length;
   }
 
+  addItem() {
+    this.goals.push(this.goalText); //submit item
+    this.goalText = ''; //clear item after submission
+    this.itemCount = this.goals.length; //update count
+  }
 }
